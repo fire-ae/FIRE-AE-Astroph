@@ -1,4 +1,4 @@
-"""Module to retrieve Astrophyical Database System of NASA data for literature reviewing"""
+"""Module to retrieve Astrophyics Data System of NASA data for literature reviewing"""
 
 import ads # The necessary package for NASA ADS API
 
