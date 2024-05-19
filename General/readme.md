@@ -3,7 +3,7 @@
 > [!NOTE]
 > #Literature Review Assisting Tool in Astrophysics
 > 
-> [lit_rev.py] and [litrevlib.py]
+> [lit_rev.md] and [litrevlib.py]
 
 > [!WARNING]
 > This is not fool-proof. The user is responsible for, i.e., not putting a NumPy array for a string formatted path variable.
