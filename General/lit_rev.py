@@ -6,36 +6,21 @@ ads.config.token = '##YOUR TOKEN HERE##'
 # Look at here https://ads.readthedocs.io/en/latest/#getting-started to generate your TOKEN
 # Also check https://ads.readthedocs.io/en/latest/#rate-limit-usage for query rate limit
 
+# Example uses
 
-# Initial query according to the parameters defined below
+query = ["JWST","disk","exoplanet"]
 
-papers = ads.SearchQuery(q=['exoplanet', 'JWST', 'disk'], # Query terms
-                         fl=['title', 'year', 'citation_count'], # Field limit to query
-                         sort='year', # Sorting results according to this field
-                         max_pages=1  # Page limit, max 50 entry for a page)
+# Print titles and year, citation_counts, Quick look to the query results
+> litrevlib.ret(query) 
 
-# Following look prints the title, publication year, and citation count of the items queried
+# Print the 3rd in the list's title, year, citation count, abstract
+> litrevlib.ret(query, 3) 
 
-i = 0 # This makes a rank/sort number, so we can then retrieve that entry specifically after the same query
-for paper in papers:
-    i = i + 1
-    print(i, paper.title, ", Pub. year: ", paper.year, ", # of cit.", paper.citation_count, '\n')
+# Print the 3rd and 4th in the list's title, year, citation count, abstract
+> litrevlib.ret(query, [3,4]) 
 
-# Following function makes the same query as above, and only retrieves the specified entry orders
-# like 1 for retrieving the first item's title, publication year, citation count AND its abstract.
+# Print the 3rd in the list's title, year, citation count, abstract and its citation in BibTeX format
+> litrevlib.ret(query, 3, cite=True) 
 
-def abs_int(list_int: [list, int]):
-    """ After seeing a query result, prints desired title's abstracts right below them
-    
-    :param list_int: int or list of integers to retrieve title and abstracts
-    """
-    papers = ads.SearchQuery(q=["exoplanet", "JWST", "disk"], fl=['title', 'abstract', 'year', 'citation_count'], sort="year", max_pages=1 )
-    i = 0
-    for paper in papers:
-        i = i + 1
-        if type(list_int) == list:
-            if i in list_int:
-                print(i, paper.title, "Pub. year: ", paper.year, "# of cit.", paper.citation_count, '\n', '\n', paper.abstract, '\n')
-        elif (type(list_int) == int) & (i == list_int):
-            print(i, paper.title, paper.year, paper.citation_count, '\n', '\n', paper.abstract, '\n')
-            break
+# Print the 3rd in the list's title, year, citation count, abstract and its citation in BibTeX format and appends it to the .bib file specified in "locat"
+> litrevlib.ret(query, 3, cite=True, loca= locat) 
