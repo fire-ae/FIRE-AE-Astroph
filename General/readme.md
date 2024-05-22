@@ -6,6 +6,9 @@
 > [lit_rev.md] and [litrevlib.py]
 
 > [!WARNING]
+> New papers and preprints are rapidly being published and quickly recorded in ADS database, hence query results may change daily.
+
+> [!WARNING]
 > This is not fool-proof. The user is responsible for, i.e., not putting a NumPy array for a string formatted path variable.
 
   * Arguably, it will benefit people with low-end PC and easily distracted mind, as it will not require to open a browser to look for interesting articles' abstracts.
