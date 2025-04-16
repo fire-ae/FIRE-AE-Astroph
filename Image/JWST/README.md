@@ -1,6 +1,7 @@
 # Folder specific for Image examinations from James-Webb Space Telescope.
 
 >[!IMPORTANT]
+>Again currently (April 16, 2025), the code works just fine.
 >Currently (April 18, 2024), there is no problem, code is working fine.
 
 >[!WARNING]
