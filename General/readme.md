@@ -1,6 +1,6 @@
 # General Tools beneficial in the process of Astrophysics Research
 
-> [!WARNING]
+> [!CAUTION]
 > As of April 17, 2025, title and abstracts are retrieved fine, but there are some problems in Bibtex entry retrievals. I will update here when I fix this (which I need to to asap).
 
 
